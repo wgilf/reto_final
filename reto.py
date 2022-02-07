@@ -6,6 +6,14 @@ tablero=[" ","1","2","3","4","5","6","7","8","9"]
 primer_player="x"
 segundo_player="O"
 listado=[]
+try:
+        with open(r'bus.json', 'r') as f:
+                fdfddata = json.load(f)
+
+except:
+        lol=[]
+        with open("bus.json", "a") as write_file:
+                json.dump(lol, write_file)
 def table(tablero,primer_player,segundo_player,PRIMER_NAME,SEGUNDO_NAME,listado):
     ii=0
    
