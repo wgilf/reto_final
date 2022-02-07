@@ -53,7 +53,88 @@ def table(tablero,primer_player,segundo_player,PRIMER_NAME,SEGUNDO_NAME,listado)
     return print("NADIE GANA"), exit()
 
 
+def comprobar(tablero,ii,ppr,listado):
+    primer_player="x"
+    segundo_player="O"
+    tr=""
+    r=0
+    if(ii%2==0):
+        tr=primer_player
+    else:
+        tr=segundo_player
+    if(tablero[1]==tr and tablero[2]==tr and tablero[3]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[4]==tr and tablero[5]==tr and tablero[6]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[7]==tr and tablero[8]==tr and tablero[9]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[1]==tr and tablero[4]==tr and tablero[7]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[2]==tr and tablero[5]==tr and tablero[8]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[3]==tr and tablero[6]==tr and tablero[9]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[1]==tr and tablero[5]==tr and tablero[9]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    elif(tablero[3]==tr and tablero[5]==tr and tablero[7]==tr):
+        print("gano = "+str(ppr))
+        r=1
+    if(r==1):
+        #listado.append(ppr)
+        with open(r'bus.json', 'r') as f:
+            json_data = json.load(f)
+        json_data=list(json_data)
+        json_data.append(ppr)
+        with open("bus.json", "w") as write_file:
+            json.dump(json_data, write_file)
+        
+        #listado=(",")
+        
+        for i in range(3):
+            for j in range(3):
+                p=(j)+i*3
+                p+=1
+                print("["+str(tablero[p])+"]", end="")
+            print()
+        print("Si decea jugar de nuevo escriba 1 de lo contrario marque cualquier cosa")
+        try:
+            w=input("=")
+            
+            if(int(w)==1):
+                print("in")
+                tablero=list(base)
+                listado=[]
+                PRIMER_NAME_in=input(Fore.BLUE +"Nombre del primer jugador = " )
+                SEGUNDO_NAME_in=input(Fore.RED +"Nombre del segundo jugador = ")
+                llll=[]
+                llll.append(PRIMER_NAME_in)
+                llll.append(SEGUNDO_NAME_in)
+                q=random.choice(llll)
+                print("El que inicia= "+ str(q))
+                print(Fore.MAGENTA + "NOTA:El ususario tiene que ingresar valores entre 1 y 9 ")
+                if(q==(llll[0])):
+                    PRIMER_NAME=PRIMER_NAME_in
+                    SEGUNDO_NAME=SEGUNDO_NAME_in
+                else:
+                    PRIMER_NAME=SEGUNDO_NAME_in
+                    SEGUNDO_NAME=PRIMER_NAME_in
+                print(table(tablero,primer_player,segundo_player,PRIMER_NAME,SEGUNDO_NAME,listado))
+            else:
+                p("ee")
+                return 1
+                
+        except:
+            return 1
 
+
+    return print("-----------------------------------------------------------------------------------------")
 
 
 
