@@ -1,6 +1,9 @@
 #Wilson David Gil-Karen Johana Farfan Castro
 import random
 import json
+from colorama import Fore, init 
+
+init()
 base=(" ","1","2","3","4","5","6","7","8","9")
 tablero=[" ","1","2","3","4","5","6","7","8","9"]
 primer_player="x"
