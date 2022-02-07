@@ -66,5 +66,6 @@ if(q==(llll[0])):
     SEGUNDO_NAME=SEGUNDO_NAME_in
 else:
     PRIMER_NAME=SEGUNDO_NAME_in
-    SEGUNDO_NAME=PRIMER_NAME_in       
+    SEGUNDO_NAME=PRIMER_NAME_in  
+print(table(tablero,primer_player,segundo_player,PRIMER_NAME,SEGUNDO_NAME,listado))
         
