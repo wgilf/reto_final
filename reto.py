@@ -53,4 +53,13 @@ while (qwe==True):
     if(ssdf==1):
         exit()
         
+PRIMER_NAME_in=input(Fore.BLUE +"Nombre del primer jugador = " )
+SEGUNDO_NAME_in=input(Fore.RED +"Nombre del segundo jugador = ")
+llll=[]
+llll.append(PRIMER_NAME_in)
+llll.append(SEGUNDO_NAME_in)
+q=random.choice(llll)
+print("El que inicia= "+ str(q))
+print(Fore.MAGENTA + "NOTA:El ususario tiene que ingresar valores entre 1 y 9 ")
+        
         
