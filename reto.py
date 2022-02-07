@@ -61,5 +61,10 @@ llll.append(SEGUNDO_NAME_in)
 q=random.choice(llll)
 print("El que inicia= "+ str(q))
 print(Fore.MAGENTA + "NOTA:El ususario tiene que ingresar valores entre 1 y 9 ")
-        
+if(q==(llll[0])):
+    PRIMER_NAME=PRIMER_NAME_in
+    SEGUNDO_NAME=SEGUNDO_NAME_in
+else:
+    PRIMER_NAME=SEGUNDO_NAME_in
+    SEGUNDO_NAME=PRIMER_NAME_in       
         
