@@ -1,4 +1,6 @@
 #Wilson David Gil-Karen Johana Farfan Castro
+#https://recursospython.com/
+#https://www.delftstack.com/
 import random
 import json
 from colorama import Fore, init 
