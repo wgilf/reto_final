@@ -6,6 +6,52 @@ tablero=[" ","1","2","3","4","5","6","7","8","9"]
 primer_player="x"
 segundo_player="O"
 listado=[]
+def table(tablero,primer_player,segundo_player,PRIMER_NAME,SEGUNDO_NAME,listado):
+    ii=0
+   
+    for ii in range(9):
+        EEE=0
+        if(ii%2==0):
+            ppr=PRIMER_NAME
+        else:
+            ppr=SEGUNDO_NAME
+
+        print("Cual posicion es deseada "+ str(ppr))
+        for i in range(3):
+            for j in range(3):
+                p=(j)+i*3
+                p+=1
+                print("["+str(tablero[p])+"]", end="")
+            print()
+        try:
+            q=int(input("="))
+            if(tablero[q]==str(q)):
+                ()
+            else:
+                ll=0
+                while ll==0:
+                    print("posicion full escriba otro valor "+ str(ppr))
+                    q=int(input("="))
+                    if(tablero[q]==str(q)):
+                        ll=1
+                    
+           
+            if(ii%2==0):
+                tablero[q]=primer_player
+            else:
+                tablero[q]=segundo_player
+            EEE=comprobar(tablero,ii,ppr,listado)
+            if(EEE==1):
+                exit()
+        
+        except:
+            if(EEE==1):
+                exit()
+            print("pierde el turno por no saber digitar un entero xd")
+  #####      
+        
+    return print("NADIE GANA"), exit()
+
 
 
 
